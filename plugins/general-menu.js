@@ -11,7 +11,7 @@ const defaultMenu = {
   header: '*%category*',
   body: '• %cmd %islimit %isPremium',
   footer: '',
-  after: `*HBot-Self*`,
+  after: `*HBotwa*`,
 }
 
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
