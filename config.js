@@ -31,11 +31,11 @@ global.dtc = 'ᴄᴀʟʟ ᴏᴡɴᴇʀ'
 global.phn = '6285850961679'
 
 // Sticker WM
-global.packname = `Hbot-self`
+global.packname = `Hbot`
 global.author = `©2023`
 
 // Random
-global.wm = `cecile`
+global.wm = `Hbot`
 global.doc = pickRandom(["application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/msword", "application/pdf"])
 global.ephemeral = '' // 86400 = 24jam, kalo ingin di hilangkan ganti '86400' jadi 'null' atau ''
 global.monitor = `u2218384-cac4df9b51f43fa4e499c7d6` // Ambil di https://uptimerobot.com
