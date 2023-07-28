@@ -4,8 +4,8 @@ import { watchFile, unwatchFile } from 'fs'
 
 // Ini owner real no fek"
 global.owner = [
-  ['6285850961679'], // global owner 0
-  ['6285850961679'], // global owner 1
+  ['6281332383711'], // global owner 0
+  ['6281332383711'], // global owner 1
 ]
 
 global.mods = [] // Want some help?
@@ -28,10 +28,10 @@ global.dtu = 'ᴅᴏɴᴀᴛᴇ'
 global.urlnya = "gapenting"
 //========== callButtons ==========//
 global.dtc = 'ᴄᴀʟʟ ᴏᴡɴᴇʀ'
-global.phn = '6285850961679'
+global.phn = '6281332383711'
 
 // Sticker WM
-global.packname = `Hbot`
+global.packname = `𝚃𝚊𝚗𝚊𝚊𝙱𝚘𝚝`
 global.author = `©2023`
 
 // Random
