@@ -348,10 +348,6 @@ export async function handler(chatUpdate) {
                     __filename
                 }
                 try {
-                    if (!isOwner) {
-                       if (m.isGroup && (new Date - global.db.data.chats[m.chat].delay < 30000)) return
-                       if (!m.isGroup && (new Date - global.db.data.users[m.sender].delay < 30000)) return
-                    }
                     await plugin.call(this, m, extra)
                     if (!isPrems) m.limit = m.limit || plugin.limit || false
                 } catch (e) {
