@@ -33,8 +33,8 @@ apt install git -y
 apt install nodejs -y
 apt install ffmpeg -y
 apt install imagemagick -y
-git clone https://github.com/hamzzcleys/hamzz-botwa.git
-cd hamzz-botwa
+git clone https://github.com/hamzzcleys/HBot.git
+cd HBot
 npm install
 npm update
 ```
