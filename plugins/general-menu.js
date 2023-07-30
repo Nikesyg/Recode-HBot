@@ -7,11 +7,11 @@ import { apivisit } from './kanghit.js'
 
 let tags = {}
 const defaultMenu = {
-  before: ``
+  before: ``,
   header: '*%category*',
   body: '• %cmd %islimit %isPremium',
   footer: '',
-  after: `*HBotwa*`,
+  after: `*Selvie-wabot.js*`,
 }
 
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
@@ -74,17 +74,16 @@ let days = Math.floor( distance / (1000 * 60 * 60 * 24));
 let hours = Math.floor( distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
 let minute = Math.floor( distance % (1000 * 60 * 60) / (1000 * 60))
 let second = Math.floor( distance % (1000 * 60) / 1000)
-let judul = `*${ucapan()} ${conn.getName(m.sender)}*
+let judul = `📢 *${ucapan()}*
 
 *INFO BOT*
-•> Aktif selama ${uptime}
-•> *${groups.length}* Grup
-•> *${chats.length - groups.length}* Chat Pribadi
-•> *${Object.keys(global.db.data.users).length}* Pengguna
-•> ${block == undefined ? '*0* Diblokir' : '*' + block.length + '* Diblokir'}
-•> *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
-•> *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned`
-let infoh = `*NOTE :*\nDikarenakan user yang terlalu banyak dan spam, bot diberikan delay / jeda 1 menit.\nIni bertujuan untuk mencegah terjadinya ban dari whatsapp`
+• *${groups.length}* Grup
+• *${chats.length - groups.length}* Chat Pribadi
+• *${Object.keys(global.db.data.users).length}* Pengguna
+• ${block == undefined ? '*0* Diblokir' : '*' + block.length + '* Diblokir'}
+• *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
+• *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned`
+let infoh = `*MOHON DI BACA*\nketik .rules`
 /* let sections = [{
         title: `Menuju IdulFitri : ${days} Hari ${hours} Jam ${minute} Menit ${second} Detik`,
         rows: [
@@ -201,19 +200,19 @@ async function genProfile(conn, m) {
 
 function ucapan() {
         const hour_now = moment.tz('Asia/Jakarta').format('HH')
-        var ucapanWaktu = 'Ohayou...'
+        var ucapanWaktu = 'selamat pagi...'
         if (hour_now >= '03' && hour_now <= '10') {
-          ucapanWaktu = 'Ohayou...'
+          ucapanWaktu = 'selamat pagi...'
         } else if (hour_now >= '10' && hour_now <= '15') {
-          ucapanWaktu = 'Konnichiwa...'
+          ucapanWaktu = 'selamat siang...'
         } else if (hour_now >= '15' && hour_now <= '17') {
-          ucapanWaktu = 'Konnichiwa...'
+          ucapanWaktu = 'selamat siang...'
         } else if (hour_now >= '17' && hour_now <= '18') {
-          ucapanWaktu = 'Konbanwa...'
+          ucapanWaktu = 'selamat malam...'
         } else if (hour_now >= '18' && hour_now <= '23') {
-          ucapanWaktu = 'Konbanwa...'
+          ucapanWaktu = 'selamat malam...'
         } else {
-          ucapanWaktu = 'Konbanwa'
+          ucapanWaktu = 'selamat malam'
         }	
         return ucapanWaktu
 }

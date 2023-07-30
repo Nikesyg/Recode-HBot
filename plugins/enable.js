@@ -147,11 +147,11 @@ SwOnly ( ${usedPrefix + command} swonly )`
       if (!/[01]/.test(command)) return await m.reply(tulisan)
       throw false
   }
-  m.reply(`*––––––『 OPTIONS 』––––––*
-*Type:* ${type} 
-*Status:* Succes ✅
-*Options:* ${isEnable ? 'Enable' : 'Disable'}
-*For:* ${isAll ? 'This Bot' : isUser ? '' : 'This Chats'}
+  m.reply(`*-----[ OPTIONS ]-----*
+  
+*• type :* ${type} 
+*• status :* succes
+*• options :* ${isEnable ? 'enable' : 'disable'}
 `)
 }
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')

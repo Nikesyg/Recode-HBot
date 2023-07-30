@@ -10,7 +10,7 @@ let handler = async (m, { conn, text }) => {
   let { title, description, url, seconds, timestamp, views, ago, image } = vid
   let capt = `*Title:* ${title}\n*Published:* ${ago}\n*Views:* ${views}\n*Description:* ${description}\n*Url:* ${url}`
   try {
-  let aud = await conn.sendMessage(m.chat, { [seconds > 1900 ? 'document' : 'audio']: { url: `https://ytdl.pnggilajacn.my.id/?url=`+url+`&filter=audioonly&quality=highestaudio&contenttype=audio/mpeg` }, mimetype: 'audio/mpeg', fileName: `${title}.mp3` }, { quoted: m })
+  let aud = await conn.sendMessage(m.chat, { [seconds > 1900 ? 'document' : 'audio']: { url: `https://hamzzndonloader.hamzxy22.repl.co/?url=`+url+`&filter=audioonly&quality=highestaudio&contenttype=audio/mpeg` }, mimetype: 'audio/mpeg', fileName: `${title}.mp3` }, { quoted: m })
   conn.sendMessage(m.chat, { text: capt }, { quoted: aud })
   await apivisit
   } catch (e) {
