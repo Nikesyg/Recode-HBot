@@ -35,11 +35,11 @@ global.packname = `𝚃𝚊𝚗𝚊𝚊𝙱𝚘𝚝`
 global.author = `©2023`
 
 // Random
-global.wm = `Hbot`
+global.wm = `𝚃𝚊𝚗𝚊`
 global.doc = pickRandom(["application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/msword", "application/pdf"])
 global.ephemeral = '' // 86400 = 24jam, kalo ingin di hilangkan ganti '86400' jadi 'null' atau ''
 global.monitor = `u2218384-cac4df9b51f43fa4e499c7d6` // Ambil di https://uptimerobot.com
-global.multiplier = 69 // The higher, The harder levelup
+global.multiplier = 25 // The higher, The harder levelup
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
