@@ -50,31 +50,21 @@ let handler = async (m, { conn, isRowner}) => {
   })
 
   let old = performance.now()
-  await m.reply(`*T e s t i n g. . .*`)
   let neww = performance.now()
   let speed = neww - old
-  await conn.reply(m.chat,`*S P E E D*
-${Math.round(neww - old)} ms
-${speed} ms
-
-*R U N T I M E* 
-${muptime}
-${readMore}
-*CHATS*
+  await conn.reply(m.chat,`*CHATS*
 • *${groupsIn.length}* Group Chats
 • *${groupsIn.length}* Groups Joined
 • *${groupsIn.length - groupsIn.length}* Groups Left
 • *${chats.length - groupsIn.length}* Personal Chats
 • *${chats.length}* Total Chats
 
-
 *SERVER*
-*🛑 RAM:* ${format(totalmem() - freemem())} / ${format(totalmem())}
-*🔵 FreeRAM:* ${format(freemem())}
+*RAM:* ${format(totalmem() - freemem())} / ${format(totalmem())}
+*FreeRAM:* ${format(freemem())}
+*Platform :* ${os.platform()}
+*Server :* ${os.hostname()}
 
-*💻 Platform :* ${os.platform()}
-*🧿 Server :* ${os.hostname()}
-${readMore}
 NodeJS Memory Usage*
 ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}
 
@@ -88,7 +78,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 handler.help = ['ping', 'speed']
 handler.tags = ['info', 'tools']
 
-handler.command = /^(ping|speed|info)$/i
+handler.command = /^(ping|speed|p)$/i
 export default handler
 
 const more = String.fromCharCode(8206)
@@ -97,7 +87,7 @@ const readMore = more.repeat(4001)
 function clockString(ms) {
   let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000)
   let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
-  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+  let m= isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return [d, ' *Days ☀️*\n ', h, ' *Hours 🕐*\n ', m, ' *Minute ⏰*\n ', s, ' *Second ⏱️* '].map(v => v.toString().padStart(2, 0)).join('')
+  return [d, ' *Days*\n ', h, ' *Hours*\n ', m, ' *Minute*\n ', s, ' *Second* '].map(v => v.toString().padStart(2, 0)).join('')
 }
